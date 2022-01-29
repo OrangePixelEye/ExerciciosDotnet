@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManipulacaoDados", "ManipulacaoDados\ManipulacaoDados.csproj", "{BF756304-6693-4801-BB99-3DDA70E1020F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManipulacaoDados.Tests", "ManipulacaoDados.Tests\ManipulacaoDados.Tests.csproj", "{7D65BC88-8532-403F-83B3-E6E5AD383142}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF756304-6693-4801-BB99-3DDA70E1020F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF756304-6693-4801-BB99-3DDA70E1020F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF756304-6693-4801-BB99-3DDA70E1020F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF756304-6693-4801-BB99-3DDA70E1020F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D65BC88-8532-403F-83B3-E6E5AD383142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D65BC88-8532-403F-83B3-E6E5AD383142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D65BC88-8532-403F-83B3-E6E5AD383142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D65BC88-8532-403F-83B3-E6E5AD383142}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
