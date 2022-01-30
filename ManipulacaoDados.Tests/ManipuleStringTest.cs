@@ -5,6 +5,7 @@ namespace ManipulacaoDados.Tests
 {
     public class ManipuleStringTest
     {
+        [Fact]
         public void deleteVowels() {
             // Arrange
             var m = new ManipuleString();
@@ -17,6 +18,7 @@ namespace ManipulacaoDados.Tests
             // Assert
             Assert.True(expected.Equals(result));
         }
+        [Fact]
         public void quantityLetter()
         {
             // Arrange
@@ -31,6 +33,7 @@ namespace ManipulacaoDados.Tests
             // Assert
             Assert.True(result == expected);
         }
+        [Fact]
         public void invertString() 
         {
             // arrange
@@ -39,11 +42,13 @@ namespace ManipulacaoDados.Tests
             string expected = "sebiv looc";
 
             // Act
-            string result = m.invertString(input);
+            string? result = m.invertString(input);
 
             // Assert
             Assert.True(expected.Equals(result));
         }
+
+        [Fact]
         public void deleteLetter() { 
             // arrange
             var m = new ManipuleString();
@@ -57,6 +62,8 @@ namespace ManipulacaoDados.Tests
             // Assert
             Assert.True(expected.Equals(result));
         }
+        
+        [Fact]
         public void deleteAfterLetter() 
         {
             // arrange
@@ -71,6 +78,7 @@ namespace ManipulacaoDados.Tests
             // Assert
             Assert.True(expected.Equals(result));
         }
+        [Fact]
         public void deleteBeforeLetter() 
         {
             // arrange
@@ -85,6 +93,7 @@ namespace ManipulacaoDados.Tests
             // Assert
             Assert.True(expected.Equals(result));
         }
+        [Fact]
         public void toUpperSomeLetters()
         {
             // arrange
