@@ -3,4 +3,6 @@ Console.WriteLine("Hello, World!");
 // string.Join(' ', result)
 ManipulacaoDados.ManipuleString m = new ManipulacaoDados.ManipuleString();
 
-System.Console.WriteLine(m.deleteLetter("cool vibes", 'o'));
+System.Console.WriteLine(m.toUpperSomeLetters("cool vibes", "LCVBS"));
+
+System.Console.WriteLine();
