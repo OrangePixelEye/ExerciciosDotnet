@@ -85,7 +85,7 @@ namespace ManipulacaoDados.Tests
             var m = new ManipuleString();
             string input = "cool vibes";
             char letter = 'v';
-            string expected = "cool ";
+            string expected = "vibes";
 
             // act
             string result = m.deleteBeforeLetter(input, letter);
@@ -99,7 +99,7 @@ namespace ManipulacaoDados.Tests
             // arrange
             var m = new ManipuleString();
             string input = "cool vibes";
-            string letters = "LCBS";
+            string letters = "LCVBS";
             string expected = "CooL ViBeS";
 
             // act
