@@ -1,5 +1,6 @@
 using Xunit;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ManipulacaoDados.Tests
 {
@@ -122,7 +123,7 @@ namespace ManipulacaoDados.Tests
             // Assert
             Assert.True(expected.Equals(result));
         }
-
+        [Fact]
         public void findUniqueLetters() {
             // arrange
             var m = new ManipuleString();
@@ -146,8 +147,10 @@ namespace ManipulacaoDados.Tests
             // act
             Dictionary<char,int> result = m.findUniqueLetters(input);
             // Assert
-            Assert.True(expected.Equals(result));
+            
+            Assert.True(expected.Count == result.Count && !expected.Except(result).Any());
         }
+        [Fact]
         public void overrideLetter()
         {
             // arrange
@@ -155,7 +158,7 @@ namespace ManipulacaoDados.Tests
             string input = "caal vibes far yau";
             char letterBase = 'a';
             char overrideTo = 'o';
-            string expected = "CooL ViBeS";
+            string expected = "cool vibes for you";
 
             // act
             string result = m.overrideLetter(input, letterBase, overrideTo);
