@@ -22,18 +22,31 @@ namespace ManipulacaoDados
         
         public string deleteBeforeLetter(string s, char l) => new string(s.SkipWhile(x => !x.Equals(l)).ToArray());
        
-        //to -do : fix
         public string toUpperSomeLetters(string s, string toUpperL) => new string(s.Select(x => toUpperL.ToLower().Contains(x.ToString()) ? char.ToUpper(x) : x ).ToArray());
-           
-           
         
         public string deleteEveryOtherLetter(string s) => s;
         
         // finds unique letters and it quantitty
         public Dictionary<char, int> findUniqueLetters(string s){
-            return new Dictionary<char, int>();
+            Dictionary<char, int> d = new Dictionary<char, int>();
+            
+            foreach (var c in s){
+               if(d.ContainsKey(c))
+                    d[c]++; 
+                else 
+                    d.Add(c, 1);
+            }
+            Dictionary<string, int> data = new Dictionary<string, int>();
+            data.Add("abc", 123);
+            data.Add("def", 456);
+            foreach (char key in d.Keys)
+            {
+                Console.WriteLine($"{key} :{d[key]}");
+                
+            }
+            return d;
         }
 
-        public string overrideLetter(string s, char baseLetter, char toOverride) => string.Empty;
+        public string overrideLetter(string s, char baseLetter, char toOverride) => s.Replace(baseLetter, toOverride);
     }
 }
