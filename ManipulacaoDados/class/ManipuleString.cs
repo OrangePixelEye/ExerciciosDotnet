@@ -36,14 +36,7 @@ namespace ManipulacaoDados
                 else 
                     d.Add(c, 1);
             }
-            Dictionary<string, int> data = new Dictionary<string, int>();
-            data.Add("abc", 123);
-            data.Add("def", 456);
-            foreach (char key in d.Keys)
-            {
-                Console.WriteLine($"{key} :{d[key]}");
-                
-            }
+            
             return d;
         }
 
