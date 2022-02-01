@@ -109,7 +109,7 @@ namespace ManipulacaoDados.Tests
             // Assert
             Assert.True(expected.Equals(result));
         }
-
+        [Fact]
         public void deleteEveryOtherLetter() {
             // arrange
             var m = new ManipuleString();
