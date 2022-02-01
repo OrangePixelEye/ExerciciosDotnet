@@ -14,7 +14,7 @@ namespace ManipulacaoDados
         // Count is another LINQ method
         public int quantityLetter(string s, char find) => s.Count(l => l == find);
         
-      
+        
         public string? invertString(string s) => new string(s.Reverse().ToArray());  
         
         public string deleteLetter(string s, char l) => new string(s.Where(x => !x.Equals(l)).ToArray());
@@ -22,9 +22,21 @@ namespace ManipulacaoDados
         
         public string deleteBeforeLetter(string s, char l) => new string(s.SkipWhile(x => !x.Equals(l)).ToArray());
        
+       // Selects will consider every element on the string and apply any effect on its value
         public string toUpperSomeLetters(string s, string toUpperL) => new string(s.Select(x => toUpperL.ToLower().Contains(x.ToString()) ? char.ToUpper(x) : x ).ToArray());
         
-        public string deleteEveryOtherLetter(string s) => s;
+        public string deleteEveryOtherLetter(string s) {
+            var a = "";
+            var c_arr = s.ToArray();
+            for(int i = 0; i < s.Count(); i++)
+            {
+                if(i % 2 == 0)
+                {
+                    a +=(c_arr[i]);
+                }
+            }
+            return a;
+        }
         
         // finds unique letters and it quantitty
         public Dictionary<char, int> findUniqueLetters(string s){
